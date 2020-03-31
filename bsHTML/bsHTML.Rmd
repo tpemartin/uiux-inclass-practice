@@ -1,0 +1,44 @@
+---
+title: "Bootstrap 4 HTML"
+output: 
+  html_document:
+    theme: null
+    highlight: null
+    mathjax: null
+    self_contained: false
+    includes:
+      in_header: "external/in_header/header.html"
+      before_body: "external/before_body/before_body.html"
+      after_body: "external/after_body/after_body.html"
+params:
+  output_filename: "bsHTML.html"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+```{css}
+.fh {
+  height: 500px;
+}
+.c1 {
+  background-color: aliceblue;
+  height: 500px;
+}
+.col1 {
+  background-color: red;
+}
+.col2 {
+  background-color: blue;
+}
+.col3 {
+  background-color: green;
+}
+```
+
+```{r}
+library(htmltools)
+includeHTML("body.html")
+```
+
