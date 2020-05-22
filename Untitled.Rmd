@@ -1,0 +1,76 @@
+
+```{js}
+const objExample={
+    name:'Lin',
+    changeName: function(newName){this.name=newName}}
+```
+
+```{js}
+const objExample2={
+  name: 'Huang",
+  changeName:
+}
+```
+
+```{js}
+// object instance本身是mutable
+objExample2=objExample;
+objExample2.name="Lee";
+
+// 如果建立person是常要做的事，必需要建立Person prototype，並以它產生new object instance.
+const mr_Lee= new Person("Lee");
+```
+
+```{r}
+library(dplyr)
+exDataPost80s <- readr::read_csv("/Users/martin/Dropbox/github-data/exDataPost80s.csv")
+exDataPost80s %>%
+  group_by(幣別) %>%
+  summarise(
+    平均匯率=mean(匯率, na.rm=T)
+  ) -> averageEX
+```
+
+```{r}
+writeLines(
+  jsonlite::toJSON(averageEX),
+  con="myJsonData.json"
+)
+```
+
+```{js}
+var requestURL = 'myJsonData.json'
+
+//設定準備使用的GET instance
+const requestMyJson = new XMLHttpRequest();
+requestMyJson.open('GET', requestURL);
+requestMyJson.responseType = 'json';
+
+var exchangeRate
+//Asynchronous communication
+requestMyJson.onload = function() {
+  exchangeRate = requestMyJson.response;
+}
+
+//送出請求
+requestMyJson.send();
+```
+
+```{js}
+var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';  //如前面已出現var requestURL, var可不寫
+
+//設定準備使用的GET instance
+const request2 = new XMLHttpRequest();
+request2.open('GET', requestURL);
+request2.responseType = 'json';
+
+var superHeroes
+//Asynchronous communication
+request2.onload = function() {
+  superHeroes = request2.response;
+}
+
+//送出請求
+request2.send();
+```
+
