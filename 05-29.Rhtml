@@ -18,6 +18,11 @@ end.rcode-->
   <div class="row">
     <div class="col-sm">
       One of three columns
+
+<!--begin.rcode
+htmltools::includeHTML("showButton.html")
+end.rcode-->
+
     </div>
     <div class="col-sm">
       <div id="myOutput1"></div>
@@ -54,7 +59,12 @@ $(document).ready(function(){
 
   $("p").click(function(){ $(this).hide();
 });
-})
+
+  $("#unnamed-chunk-2 > div > button").click(
+  function(){
+    $("p").show();
+  })
+});
 </script>
 </body>
 </html>
