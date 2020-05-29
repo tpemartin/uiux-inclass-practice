@@ -101,22 +101,19 @@ function(){
     console.log($(this).text());
     console.log("it is click");
 })
-/*
-$("#myDropdown > a:nth-child(1)").click(
-function(){
-    userChoice=$(this).text();
-    console.log($(this).text());
-    console.log("it is click");
-})
-*/
 
-/*
-$("#myDropdown > a").click(
-function(){
-    userChoice=$(this).text();
-    //console.log($(this).text());
-})
-*/
+//
+var formInput=new Object();
+formInput.password="";
+$("#myForm").change(function(e){
+    formInfo=e;
+    console.log("alert");
+    password=document.forms.myForm.exampleInputPassword1.value;
+});
+
+
+//
+
 });
 </script>
 </body>
