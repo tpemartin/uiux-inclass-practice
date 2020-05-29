@@ -23,6 +23,16 @@ end.rcode-->
 htmltools::includeHTML("showButton.html")
 end.rcode-->
 
+<button type="button" class="btn btn-success">顯示</button>
+
+<!--begin.rcode
+htmltools::includeHTML("dropdownMenu.html")
+end.rcode-->
+
+<!--begin.rcode
+htmltools::includeHTML("myForm.html")
+end.rcode-->
+
     </div>
     <div class="col-sm">
       <div id="myOutput1"></div>
@@ -64,6 +74,49 @@ $(document).ready(function(){
   function(){
     $("p").show();
   })
+  
+  $("body > div > div > div:nth-child(1) > button").click(
+function(){
+    $("p").show();
+}
+)
+
+var userChoice;
+
+$("#myDropdown > a:nth-child(1)").click(
+function(){
+    userChoice=$(this).text();
+    console.log($(this).text());
+    console.log("it is click");
+})
+$("#myDropdown > a:nth-child(2)").click(
+function(){
+    userChoice=$(this).text();
+    console.log($(this).text());
+    console.log("it is click");
+})
+$("#myDropdown > a:nth-child(3)").click(
+function(){
+    userChoice=$(this).text();
+    console.log($(this).text());
+    console.log("it is click");
+})
+/*
+$("#myDropdown > a:nth-child(1)").click(
+function(){
+    userChoice=$(this).text();
+    console.log($(this).text());
+    console.log("it is click");
+})
+*/
+
+/*
+$("#myDropdown > a").click(
+function(){
+    userChoice=$(this).text();
+    //console.log($(this).text());
+})
+*/
 });
 </script>
 </body>
