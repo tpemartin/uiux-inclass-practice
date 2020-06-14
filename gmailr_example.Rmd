@@ -1,0 +1,30 @@
+---
+title: "gmailr example"
+author: "林茂廷"
+date: "6/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(gmailr)
+gm_auth_configure()
+gm_auth()
+```
+
+```{r}
+test_email <-
+  gm_mime() %>%
+  gm_to("mtlin@gm.ntpu.edu.tw") %>%
+  gm_from("tpemartin@gm.ntpu.edu.tw") %>%
+  gm_subject("測試gmailr") %>%
+  gm_text_body("Can you hear me now?")
+
+# Verify it looks correct
+gm_create_draft(test_email)
+```
+

@@ -1,0 +1,58 @@
+var global_number1=1; // ; 表指令結束
+var global_string1="小明";
+var global_boolean1=true;
+var global_array1=[410773092,"小華", false];
+var global_object1={
+'姓名': "王小華",
+'學號': 410773092,
+'是否註冊': true
+};
+global_number1
+View(ct)
+global_number2
+var global_number1=1; // ; 表指令結束
+var global_string1="小明";
+var global_boolean1=true;
+var global_array1=[410773092,"小華", false];
+var global_object1={
+'姓名': "王小華",
+'學號': 410773092,
+'是否註冊': true
+};
+let global_number2=2;
+var global_number3=3;
+/* {...} 形成一個local scope */
+{
+let local_number1=3; // ; 表指令結束
+let local_string1="小華";
+let local_boolean1=false;
+let local_array1=[410773103,"小新", false];
+let local_object1={
+'姓名': "王小新",
+'學號': 410773103,
+'是否註冊': true
+};
+}
+global_number3
+global_number2
+Object
+Object.keys()
+Object.keys(this).length()
+global
+global_array1
+global_array1
+globalThis.global
+global_number2
+local_object1\
+local_object1
+global_number3
+global_number2
+global_number1
+global_number1
+global_string1
+global_string3
+global_string2
+exists()
+local_string1
+global_string5
+global_string4

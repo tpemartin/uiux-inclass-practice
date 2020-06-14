@@ -1,0 +1,18 @@
+---
+title: "Untitled"
+author: "林茂廷"
+date: "6/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+```{r}
+library(httr)
+GET("http://127.0.0.1:3732/echo") %>%
+  content()
+```
+

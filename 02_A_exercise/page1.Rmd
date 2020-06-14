@@ -1,0 +1,9 @@
+---
+title: "Plain HTML"
+output: 
+  html_document:
+    theme: null
+    highlight: null
+    mathjax: null
+    self_contained: false
+---

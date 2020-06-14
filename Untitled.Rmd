@@ -1,76 +1,50 @@
+---
+title: "Untitled"
+author: "林茂廷"
+date: "6/13/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 
-```{js}
-const objExample={
-    name:'Lin',
-    changeName: function(newName){this.name=newName}}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr); library(lubridate); library(purrr); library(stringr)
 ```
 
-```{js}
-const objExample2={
-  name: 'Huang",
-  changeName:
-}
+### create new element
+
+```{r}
+jsonlite::fromJSON("SearchShowAction.json",simplifyDataFrame = F) -> myData
 ```
 
-```{js}
-// object instance本身是mutable
-objExample2=objExample;
-objExample2.name="Lee";
+* 選單項目：前三個titles
 
-// 如果建立person是常要做的事，必需要建立Person prototype，並以它產生new object instance.
-const mr_Lee= new Person("Lee");
+```{r}
+myData[[1]]['title']
 ```
 
 ```{r}
-library(dplyr)
-exDataPost80s <- readr::read_csv("/Users/martin/Dropbox/github-data/exDataPost80s.csv")
-exDataPost80s %>%
-  group_by(幣別) %>%
-  summarise(
-    平均匯率=mean(匯率, na.rm=T)
-  ) -> averageEX
+myData[1:3] %>% map_chr(~.x[['title']]) ->
+  titles
+titles
 ```
+
+* 訊息項目：
 
 ```{r}
-writeLines(
-  jsonlite::toJSON(averageEX),
-  con="myJsonData.json"
-)
+myData[1:3] %>%
+  map_dfr(
+    ~.x[c("sourceWebName","startDate","endDate")]
+  ) %>%
+  jsonlite::toJSON() %>%
+  writeLines(
+    con="myData3.json"
+  )
 ```
 
-```{js}
-var requestURL = 'myJsonData.json'
-
-//設定準備使用的GET instance
-const requestMyJson = new XMLHttpRequest();
-requestMyJson.open('GET', requestURL);
-requestMyJson.responseType = 'json';
-
-var exchangeRate
-//Asynchronous communication
-requestMyJson.onload = function() {
-  exchangeRate = requestMyJson.response;
-}
-
-//送出請求
-requestMyJson.send();
-```
 
 ```{js}
-var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';  //如前面已出現var requestURL, var可不寫
 
-//設定準備使用的GET instance
-const request2 = new XMLHttpRequest();
-request2.open('GET', requestURL);
-request2.responseType = 'json';
-
-var superHeroes
-//Asynchronous communication
-request2.onload = function() {
-  superHeroes = request2.response;
-}
-
-//送出請求
-request2.send();
 ```
 

@@ -37,7 +37,7 @@ knitr::opts_chunk$set(echo = F)
 }
 ```
 
-```{r}
+```{r, results='asis'}
 library(htmltools)
 includeHTML("body.html")
 ```

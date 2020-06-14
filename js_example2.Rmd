@@ -1,0 +1,49 @@
+---
+title: "JS Example"
+output: 
+  html_document:
+    theme: null
+    highlight: null
+    mathjax: null
+    self_contained: false
+    # includes:
+      # in_header: "js_header.html"
+      # after_body: "jsbody.html"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval=TRUE)
+library(V8)
+library(dplyr)
+ct <- v8()
+```
+
+
+```{r}
+htmltools::includeScript("jsTest.js")
+```
+
+
+```{r, eval=F}
+ct$reset()
+readLines("jsTest.js") %>%
+  ct$eval()
+```
+
+
+```{r}
+htmltools::includeScript("jsTest2.js")
+```
+
+
+```{r, eval=F}
+ct$reset()
+readLines("jsTest2.js") %>%
+  ct$eval()
+```
+
+```{r}
+ct$console()
+```
+在console裡我們可以看到那些變數？

@@ -1,0 +1,23 @@
+---
+title: "form HTML"
+output: 
+  html_document:
+    theme: null
+    highlight: null
+    mathjax: null
+    self_contained: false
+---
+
+<form action="." method="POST">
+<div>
+<label for="say">What greeting do you want to say?</label>
+<input name="say" id="say" value="Hi">
+</div>
+<div>
+<label for="to">Who do you want to say it to?</label>
+<input name="to" id="to" value="Mom">
+</div>
+<div>
+<button>Send my greetings</button>
+</div>
+</form>

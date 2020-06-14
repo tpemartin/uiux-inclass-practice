@@ -7,7 +7,7 @@ output:
     mathjax: null
     self_contained: false
     includes:
-      in_header: "h.html"
+      in_header: ["gahead.html", "h.html"]
 ---
 
 <div class="container">

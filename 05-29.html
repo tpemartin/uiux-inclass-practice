@@ -1,0 +1,202 @@
+<html>
+
+
+
+<head>
+<style type="text/css">
+.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>UIUX05-29</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+<!-- As a heading -->
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Navbar</span>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+
+<div class="chunk" id="unnamed-chunk-2"><div class="rcode"><!--html_preserve--><button type="button" class="btn btn-primary">Show</button><!--/html_preserve--></div></div>
+
+<button type="button" class="btn btn-success">顯示</button>
+
+<div class="chunk" id="unnamed-chunk-3"><div class="rcode"><!--html_preserve--><div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div id="myDropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">A</a>
+    <a class="dropdown-item" href="#">B</a>
+    <a class="dropdown-item" href="#">C</a>
+  </div>
+</div><!--/html_preserve--></div></div>
+
+<div class="chunk" id="unnamed-chunk-4"><div class="rcode"><!--html_preserve--><form id="myForm">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form><!--/html_preserve--></div></div>
+
+    </div>
+    <div class="col-sm">
+      <div id="myOutput1"></div>
+      <div id="myOutput2"></div>
+      <div id="myOutput3"></div>
+    </div>
+    <div class="col-sm">
+      <p>This is an R HTML document. When you click the <b>Knit HTML</b> button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+
+<div class="chunk" id="unnamed-chunk-5"><div class="rcode"><div class="output"><pre class="knitr r">##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+</pre></div>
+</div></div>
+
+<p>You can also embed plots, for example:</p>
+
+<div class="chunk" id="unnamed-chunk-6"><div class="rimage default"><img src="figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div></div>
+
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script>
+var el; // 宣告el為global variable
+$(document).ready(function(){
+  el=$("body > div > div > div:nth-child(3) > p:nth-child(1)"); // initiate value
+  console.log( "ready!" );
+
+  $("p").click(function(){ $(this).hide();
+});
+
+  $("#unnamed-chunk-2 > div > button").click(
+  function(){
+    $("p").show();
+  })
+  
+  $("body > div > div > div:nth-child(1) > button").click(
+function(){
+    $("p").show();
+}
+)
+
+var userChoice;
+
+$("#myDropdown > a:nth-child(1)").click(
+function(){
+    userChoice=$(this).text();
+    console.log($(this).text());
+    console.log("it is click");
+})
+$("#myDropdown > a:nth-child(2)").click(
+function(){
+    userChoice=$(this).text();
+    console.log($(this).text());
+    console.log("it is click");
+})
+$("#myDropdown > a:nth-child(3)").click(
+function(){
+    userChoice=$(this).text();
+    console.log($(this).text());
+    console.log("it is click");
+})
+
+//
+var formInput=new Object();
+formInput.password="";
+$("#myForm").change(function(e){
+    formInfo=e;
+    console.log("alert");
+    password=document.forms.myForm.exampleInputPassword1.value;
+});
+
+
+//
+
+});
+</script>
+</body>
+</html>
